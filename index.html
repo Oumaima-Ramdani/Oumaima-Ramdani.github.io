@@ -1,176 +1,184 @@
-<!doctype html>
-<html lang="fr">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Oumaima Ramdani | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oumaima Ramdani | Portfolio</title>
 
-  <style>
-    :root{
-      --bg:#0b1220;
-      --card:#111a2e;
-      --text:#e8eefc;
-      --muted:#a8b3cf;
-      --accent:#22c55e;
-      --accent2:#38bdf8;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: radial-gradient(1200px 600px at 10% 20%, rgba(34,197,94,.25), transparent 60%),
-                  radial-gradient(900px 500px at 90% 10%, rgba(56,189,248,.18), transparent 55%),
-                  var(--bg);
-      color:var(--text);
-    }
-    .wrap{
-      max-width:1100px;
-      margin:0 auto;
-      padding:28px 18px 60px;
-      display:grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap:22px;
-      align-items:start;
-    }
-    .left{
-      background: linear-gradient(180deg, rgba(34,197,94,.9), rgba(34,197,94,.35));
-      border-radius:18px;
-      padding:14px;
-      position:sticky;
-      top:18px;
-      height: fit-content;
-    }
-    .photo{
-      background:#000;
-      border-radius:14px;
-      height:520px;
-      display:flex;
-      align-items:end;
-      justify-content:center;
-      overflow:hidden;
-    }
-    .photo img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      opacity:.95;
-    }
-    .right{
-      padding:6px 6px 0;
-    }
-    .hero{
-      background: rgba(17,26,46,.75);
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:18px;
-      padding:22px;
-      backdrop-filter: blur(10px);
-    }
-    .hello{font-size:46px; line-height:1.05; margin:0 0 10px}
-    .name{color:var(--accent); font-weight:800}
-    .title{color:var(--muted); margin:0 0 16px; font-size:16px}
-    .pillrow{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px}
-    .pill{
-      padding:8px 12px;
-      border-radius:999px;
-      background: rgba(56,189,248,.14);
-      border:1px solid rgba(56,189,248,.22);
-      color:var(--text);
-      font-size:13px;
-    }
-    .grid{
-      margin-top:18px;
-      display:grid;
-      grid-template-columns: 1fr;
-      gap:14px;
-    }
-    .card{
-      background: rgba(17,26,46,.75);
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:18px;
-      padding:18px;
-    }
-    h2{margin:0 0 10px; font-size:18px}
-    p{margin:0 0 10px; color:var(--muted)}
-    a{color:var(--accent2); text-decoration:none}
-    ul{margin:8px 0 0; padding-left:18px; color:var(--muted); line-height:1.7}
-    .btn{
-      display:inline-block;
-      padding:10px 14px;
-      border-radius:12px;
-      background: rgba(34,197,94,.18);
-      border:1px solid rgba(34,197,94,.30);
-      color:var(--text);
-      font-weight:600;
-      margin-top:8px;
-    }
-    .mini{
-      font-size:13px;
-      color:var(--muted);
-    }
-    @media (max-width:900px){
-      .wrap{grid-template-columns:1fr}
-      .left{position:relative}
-      .photo{height:360px}
-      .hello{font-size:38px}
-    }
-  </style>
+<style>
+
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#0f172a;
+color:white;
+}
+
+.container{
+display:flex;
+height:100vh;
+}
+
+/* LEFT IMAGE */
+.left{
+width:40%;
+background:#16a34a;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.left img{
+width:80%;
+border-radius:10px;
+}
+
+/* RIGHT TEXT */
+
+.right{
+width:60%;
+padding:60px;
+}
+
+h1{
+font-size:60px;
+margin-bottom:10px;
+}
+
+.name{
+color:#22c55e;
+}
+
+.subtitle{
+font-size:18px;
+color:#94a3b8;
+margin-bottom:30px;
+}
+
+.section{
+margin-top:40px;
+}
+
+.skills li{
+margin-bottom:8px;
+}
+
+.button{
+display:inline-block;
+margin-top:20px;
+padding:12px 20px;
+background:#22c55e;
+color:white;
+text-decoration:none;
+border-radius:6px;
+}
+
+.project{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+margin-top:15px;
+}
+
+a{
+color:#38bdf8;
+text-decoration:none;
+}
+
+</style>
+
 </head>
 
 <body>
-  <div class="wrap">
 
-    <!-- LEFT IMAGE -->
-    <aside class="left">
-      <div class="photo">
-        <!-- Option 1: mettre une image -->
-        <!-- Remplace "YOUR_IMAGE_URL" par l’URL d’une image (ou supprime <img> pour un bloc noir) -->
-        <img src="YOUR_IMAGE_URL" alt="Illustration" />
-      </div>
-      <p class="mini" style="margin:10px 6px 0;">
-        Disponible pour une alternance Data / IA à partir de septembre 2026.
-      </p>
-    </aside>
+<div class="container">
 
-    <!-- RIGHT CONTENT -->
-    <main class="right">
-      <section class="hero">
-        <h1 class="hello">Hi, I'm <span class="name">Oumaima</span><br/>Data Science Engineer in training.</h1>
-        <p class="title">M1 Data Science & Systèmes Distribués – UPEC · Machine Learning · Computer Vision · Data Analysis</p>
+<!-- LEFT IMAGE -->
 
-        <div class="pillrow">
-          <span class="pill">Python</span>
-          <span class="pill">SQL</span>
-          <span class="pill">Computer Vision</span>
-          <span class="pill">OCR (Tesseract / EasyOCR)</span>
-          <span class="pill">Tableau</span>
-        </div>
+<div class="left">
 
-        <a class="btn" href="https://github.com/Oumaima-Ramdani" target="_blank">Voir mon GitHub</a>
-      </section>
+<img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c" alt="data">
 
-      <section class="grid">
-        <div class="card">
-          <h2>À propos</h2>
-          <p>Étudiante en M1 à l’UPEC, je m’intéresse à la data, au machine learning et à la computer vision. Je recherche une alternance pour septembre 2026 (Data Analyst / Data Science).</p>
-        </div>
+</div>
 
-        <div class="card">
-          <h2>Projet</h2>
-          <p><b>Swica Card Data Extraction (OCR & Computer Vision)</b><br/>
-          Extraction automatique d’informations depuis des cartes d’assurance, structuration et export en JSON.</p>
-          <a href="https://github.com/Oumaima-Ramdani/CarteSwica_Project" target="_blank">Voir le projet sur GitHub →</a>
-        </div>
+<!-- RIGHT CONTENT -->
 
-        <div class="card">
-          <h2>Contact</h2>
-          <p>
-            GitHub : <a href="https://github.com/Oumaima-Ramdani" target="_blank">github.com/Oumaima-Ramdani</a><br/>
-            LinkedIn : <a href="https://www.linkedin.com" target="_blank">à remplacer par ton lien</a>
-          </p>
-        </div>
-      </section>
-    </main>
+<div class="right">
 
-  </div>
+<h1>Hi, I'm <span class="name">Oumaima</span></h1>
+
+<p class="subtitle">
+Data Science Student | Computer Vision | Machine Learning
+</p>
+
+<div class="section">
+
+<h2>About me</h2>
+
+<p>
+Master 1 student in Data Science & Distributed Systems at UPEC.  
+Interested in machine learning, computer vision and data analysis.  
+Currently looking for a Data Science / Data Analyst alternance for September 2026.
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>Skills</h2>
+
+<ul class="skills">
+<li>Python</li>
+<li>SQL</li>
+<li>Machine Learning</li>
+<li>Computer Vision</li>
+<li>OCR (Tesseract / EasyOCR)</li>
+</ul>
+
+</div>
+
+<div class="section">
+
+<h2>Projects</h2>
+
+<div class="project">
+
+<b>Swica Card Data Extraction</b>
+
+<p>
+Automatic extraction of information from insurance cards using Computer Vision and OCR.
+</p>
+
+<a href="https://github.com/Oumaima-Ramdani/CarteSwica_Project" target="_blank">
+View Project on GitHub
+</a>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>Contact</h2>
+
+<p>
+GitHub: <a href="https://github.com/Oumaima-Ramdani">github.com/Oumaima-Ramdani</a>
+</p>
+
+<p>
+LinkedIn: ajoute ton lien ici
+</p>
+
+</div>
+
+<a class="button" href="https://github.com/Oumaima-Ramdani">
+My GitHub
+</a>
+
+</div>
+
+</div>
+
 </body>
+
 </html>
